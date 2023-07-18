@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Website</title>
+  <h1 style="color:blue;font-size: 30px;font-family: 'Courier New', Courier, monospace;">Nantucket Owl<br> Charity Cornhole Classic</h1>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <!-- Navigation -->
 <div class="w3-navbar">
   <a href="index.html" class="w3-button">Home</a>
@@ -24,6 +25,87 @@
 </div>
 
 <!-- Content for your home page -->
+<style>
+  /* Styles for the slideshow container */
+  .slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Styles for the images */
+  .mySlides {
+    display: none;
+  }
+
+  /* Styles for the navigation dots */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Active dot style */
+  .active {
+    background-color: #717171;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+<!-- Slides -->
+<div class="mySlides">
+  <img src="https://lh3.googleusercontent.com/pw/AIL4fc--xGsPuhDcCpkKk6nhCKYODnvgJIai3hIX5rYJu020fSfFcV2wKl2hvpe9QhWUR2NygJrWsfGZYlOQWm_BebaM5C1Z9zzNOnPZVQWgQEUkTx4ohfw=w2400" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="https://lh3.googleusercontent.com/pw/AIL4fc8TCW6IV5Gjm85uErFZERwLrY51L_sBewe-OynkGCzL0jXP1ORprL6-TssHku53I7Ak3-w8uXNiTYxdWfy-3EEYX3FMStH3y-xBAwyXckddW35BBas=w2400" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="image3.jpg" style="width:100%">
+</div>
+
+<!-- Navigation dots -->
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</div>
+
+<script>
+// JavaScript code for the slideshow functionality
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {
+  slideIndex = 1;
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex - 1].style.display = "block";
+dots[slideIndex - 1].className += " active";
+setTimeout(showSlides, 5000); // Change slide every 2 seconds
+}
+</script>
+
+
 
 </body>
+
 </html>
